@@ -14,6 +14,7 @@
 		CC5CBCC022D50C7C00D2F580 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC5CBCBE22D50C7C00D2F580 /* LaunchScreen.storyboard */; };
 		CC5CBCCB22D50C7C00D2F580 /* Kpop_Recommendations_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5CBCCA22D50C7C00D2F580 /* Kpop_Recommendations_Tests.swift */; };
 		CC5CBCD622D50C7C00D2F580 /* Kpop_Recommendations_UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5CBCD522D50C7C00D2F580 /* Kpop_Recommendations_UITests.swift */; };
+		CC5CBCE622D5174700D2F580 /* RecommendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5CBCE522D5174700D2F580 /* RecommendViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		CC5CBCD122D50C7C00D2F580 /* Kpop Recommendations!UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Kpop Recommendations!UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC5CBCD522D50C7C00D2F580 /* Kpop_Recommendations_UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kpop_Recommendations_UITests.swift; sourceTree = "<group>"; };
 		CC5CBCD722D50C7C00D2F580 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CC5CBCE522D5174700D2F580 /* RecommendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 				CC5CBCB522D50C7900D2F580 /* AppDelegate.swift */,
 				CC5CBCB722D50C7900D2F580 /* ViewController.swift */,
 				CC5CBCB922D50C7900D2F580 /* Main.storyboard */,
+				CC5CBCE522D5174700D2F580 /* RecommendViewController.swift */,
 				CC5CBCBC22D50C7C00D2F580 /* Assets.xcassets */,
 				CC5CBCBE22D50C7C00D2F580 /* LaunchScreen.storyboard */,
 				CC5CBCC122D50C7C00D2F580 /* Info.plist */,
@@ -258,6 +261,7 @@
 			files = (
 				CC5CBCB822D50C7900D2F580 /* ViewController.swift in Sources */,
 				CC5CBCB622D50C7900D2F580 /* AppDelegate.swift in Sources */,
+				CC5CBCE622D5174700D2F580 /* RecommendViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

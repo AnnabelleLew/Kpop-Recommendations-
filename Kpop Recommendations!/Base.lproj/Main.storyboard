@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,176 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Kpop_Recommendations_" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView autoresizesSubviews="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" insetsLayoutMarginsFromSafeArea="NO" image="background_kpop" translatesAutoresizingMaskIntoConstraints="NO" id="VXz-PW-hte">
+                                <rect key="frame" x="0.0" y="616" width="141" height="280"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WHAT KPOP GROUP SHOULD YOU LISTEN TO?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nfq-0r-f46">
+                                <rect key="frame" x="20" y="69" width="374" height="273.5"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="50"/>
+                                <color key="textColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IW8-pf-IS0">
+                                <rect key="frame" x="44.5" y="357.5" width="325" height="60"/>
+                                <color key="backgroundColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="KcK-oO-zkg"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="325" id="yuo-nD-SeG" userLabel="width = 325"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="30"/>
+                                <state key="normal" title="BEGIN">
+                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Rn4-H6-aPY" kind="show" id="GFk-fU-YiU"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="nfq-0r-f46" secondAttribute="trailing" constant="20" id="02p-fl-svY"/>
+                            <constraint firstItem="VXz-PW-hte" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="-50" id="AcF-nW-08M"/>
+                            <constraint firstItem="IW8-pf-IS0" firstAttribute="top" secondItem="nfq-0r-f46" secondAttribute="bottom" constant="15" id="GKX-Pf-YyQ"/>
+                            <constraint firstItem="VXz-PW-hte" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="50" id="N7c-Lv-F7R"/>
+                            <constraint firstItem="VXz-PW-hte" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="-150" id="Srs-Hj-AjW" userLabel="background_kpop.top = Safe Area.top"/>
+                            <constraint firstItem="nfq-0r-f46" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="25" id="UVp-56-KtB" userLabel="What kpop group should you listen to?.top = Safe Area.top + 25"/>
+                            <constraint firstItem="VXz-PW-hte" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="50" id="Yyc-XH-BGj" userLabel="background_kpop.bottom = Safe Area.bottom"/>
+                            <constraint firstItem="IW8-pf-IS0" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="aZ1-sk-Loi"/>
+                            <constraint firstItem="nfq-0r-f46" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="bRh-Vf-T6N"/>
+                            <constraint firstItem="nfq-0r-f46" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="rxX-zf-CEZ"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="40.579710144927539" y="25.446428571428569"/>
+        </scene>
+        <!--Recommend View Controller-->
+        <scene sceneID="zCC-es-qhJ">
+            <objects>
+                <viewController id="Rn4-H6-aPY" customClass="RecommendViewController" customModule="Kpop_Recommendations_" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Vxf-8L-S6s">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView autoresizesSubviews="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" insetsLayoutMarginsFromSafeArea="NO" image="background_kpop" translatesAutoresizingMaskIntoConstraints="NO" id="FT9-S7-c6n">
+                                <rect key="frame" x="0.0" y="660" width="143" height="236"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9jP-Bc-t1f">
+                                <rect key="frame" x="299" y="787" width="100" height="60"/>
+                                <color key="backgroundColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="3py-j1-i8d" userLabel="height = 60"/>
+                                    <constraint firstAttribute="width" constant="100" id="Q11-cg-J7u"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="30"/>
+                                <state key="normal" title="HOME">
+                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="voh-XE-PDp"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="bT7-7q-9cz">
+                                <rect key="frame" x="15" y="423" width="384" height="60"/>
+                                <color key="backgroundColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="jdD-ln-bXM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="30"/>
+                                <state key="normal" title="PICK A GIRL GROUP">
+                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="pickGirlGroup:" destination="Rn4-H6-aPY" eventType="touchUpInside" id="LQ6-hb-Md0"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1Nz-HX-UkX">
+                                <rect key="frame" x="15" y="74" width="384" height="334"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HKW-om-0Oj">
+                                <rect key="frame" x="207" y="59" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="25"/>
+                                <color key="textColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="31W-pi-LZq">
+                                <rect key="frame" x="15" y="498" width="384" height="60"/>
+                                <color key="backgroundColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="hjn-fL-eOg"/>
+                                    <constraint firstAttribute="width" constant="325" id="lLq-QA-7rK"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="30"/>
+                                <state key="normal" title="PICK A GUY GROUP">
+                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="pickGuyGroup:" destination="Rn4-H6-aPY" eventType="touchUpInside" id="UUi-sc-Gr5"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aGt-Ur-h7s">
+                                <rect key="frame" x="15" y="573" width="384" height="60"/>
+                                <color key="backgroundColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="vmg-HF-yOz"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="30"/>
+                                <state key="normal" title="PICK ANY GROUP">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="pickAnyGroup:" destination="Rn4-H6-aPY" eventType="touchUpInside" id="CIs-44-jYL"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="aGt-Ur-h7s" firstAttribute="leading" secondItem="9b6-By-Imk" secondAttribute="leading" constant="15" id="00w-wb-dFS"/>
+                            <constraint firstItem="31W-pi-LZq" firstAttribute="leading" secondItem="9b6-By-Imk" secondAttribute="leading" constant="15" id="03d-Ju-bpw"/>
+                            <constraint firstItem="bT7-7q-9cz" firstAttribute="centerY" secondItem="9b6-By-Imk" secondAttribute="centerY" id="0L7-8m-S1P"/>
+                            <constraint firstItem="FT9-S7-c6n" firstAttribute="top" secondItem="9b6-By-Imk" secondAttribute="top" constant="-150" id="83j-Jt-eu9"/>
+                            <constraint firstItem="FT9-S7-c6n" firstAttribute="leading" secondItem="9b6-By-Imk" secondAttribute="leading" constant="-50" id="98P-aB-Gme"/>
+                            <constraint firstItem="aGt-Ur-h7s" firstAttribute="centerX" secondItem="9b6-By-Imk" secondAttribute="centerX" id="GZv-Zt-Waf"/>
+                            <constraint firstItem="31W-pi-LZq" firstAttribute="top" secondItem="bT7-7q-9cz" secondAttribute="bottom" constant="15" id="I7J-aR-d71"/>
+                            <constraint firstItem="HKW-om-0Oj" firstAttribute="centerX" secondItem="9b6-By-Imk" secondAttribute="centerX" id="K33-R6-xmU"/>
+                            <constraint firstItem="9b6-By-Imk" firstAttribute="trailing" secondItem="1Nz-HX-UkX" secondAttribute="trailing" constant="15" id="KLW-MW-Hdg"/>
+                            <constraint firstItem="9b6-By-Imk" firstAttribute="bottom" secondItem="9jP-Bc-t1f" secondAttribute="bottom" constant="15" id="L5w-kB-i0y"/>
+                            <constraint firstItem="1Nz-HX-UkX" firstAttribute="centerX" secondItem="9b6-By-Imk" secondAttribute="centerX" id="MYm-Tc-I7c"/>
+                            <constraint firstItem="HKW-om-0Oj" firstAttribute="top" secondItem="9b6-By-Imk" secondAttribute="top" constant="15" id="Phv-uh-j0s" userLabel="GROUP NAME.top = Safe Area.top + 50"/>
+                            <constraint firstItem="FT9-S7-c6n" firstAttribute="bottom" secondItem="9b6-By-Imk" secondAttribute="bottom" constant="50" id="RJA-ew-Aqn"/>
+                            <constraint firstItem="bT7-7q-9cz" firstAttribute="top" secondItem="1Nz-HX-UkX" secondAttribute="bottom" constant="15" id="US4-tk-oD9" userLabel="PICK ANOTHER.top = ateez_pic.bottom + 25"/>
+                            <constraint firstItem="9b6-By-Imk" firstAttribute="trailing" secondItem="aGt-Ur-h7s" secondAttribute="trailing" constant="15" id="UoJ-Ub-VYA"/>
+                            <constraint firstItem="9b6-By-Imk" firstAttribute="trailing" secondItem="31W-pi-LZq" secondAttribute="trailing" constant="15" id="Yqp-pH-LiD"/>
+                            <constraint firstItem="bT7-7q-9cz" firstAttribute="leading" secondItem="9b6-By-Imk" secondAttribute="leading" constant="15" id="Zd9-TP-g0G"/>
+                            <constraint firstItem="9b6-By-Imk" firstAttribute="trailing" secondItem="bT7-7q-9cz" secondAttribute="trailing" constant="15" id="d8Y-28-97z"/>
+                            <constraint firstItem="9b6-By-Imk" firstAttribute="trailing" secondItem="9jP-Bc-t1f" secondAttribute="trailing" constant="15" id="jNi-RZ-Eje"/>
+                            <constraint firstItem="bT7-7q-9cz" firstAttribute="centerX" secondItem="9b6-By-Imk" secondAttribute="centerX" id="lOZ-SV-zzN"/>
+                            <constraint firstItem="1Nz-HX-UkX" firstAttribute="leading" secondItem="9b6-By-Imk" secondAttribute="leading" constant="15" id="nV0-zq-Hee"/>
+                            <constraint firstItem="31W-pi-LZq" firstAttribute="centerX" secondItem="9b6-By-Imk" secondAttribute="centerX" id="qaU-AY-Lfa"/>
+                            <constraint firstItem="aGt-Ur-h7s" firstAttribute="top" secondItem="31W-pi-LZq" secondAttribute="bottom" constant="15" id="uhO-AP-FLn"/>
+                            <constraint firstItem="9b6-By-Imk" firstAttribute="trailing" secondItem="FT9-S7-c6n" secondAttribute="trailing" constant="-50" id="yEy-A8-yNS"/>
+                            <constraint firstItem="1Nz-HX-UkX" firstAttribute="top" secondItem="HKW-om-0Oj" secondAttribute="bottom" constant="15" id="zRi-5O-AOJ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="9b6-By-Imk"/>
+                    </view>
+                    <connections>
+                        <outlet property="groupName" destination="HKW-om-0Oj" id="2ev-6u-KBB"/>
+                        <outlet property="showImageView" destination="1Nz-HX-UkX" id="vDf-1C-av9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3nM-Up-Gte" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="821.73913043478262" y="24.776785714285712"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="background_kpop" width="1153" height="1920"/>
+    </resources>
 </document>
